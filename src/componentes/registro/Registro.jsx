@@ -14,15 +14,8 @@ function Registro({ mensajeError, setMensajeError }) {
       </div>
       <p>o usa un mail para registrarse</p>
       <Formulario setMensajeError={setMensajeError} />
-      {/* <Formulario mensajeError={mensajeError} setMensajeError={setMensajeError} /> */}
 
       <Alert mensajeError={mensajeError} />
-
-      {/* <Alert
-        emailError={emailError}
-        passwordError={passwordError}
-        datosError={datosError}
-      /> */}
     </>
   );
 }
