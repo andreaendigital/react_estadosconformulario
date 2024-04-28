@@ -48,16 +48,6 @@ const Formulario = ({ mensajeError, setMensajeError }) => {
   return (
     <>
       <form className="formulario" onSubmit={validarDatos}>
-        {/* cuando el formulario se envie se ejecuta función de validar datos */}
-        {/* {error ? (
-          <p className="error">Todos los campos son obligatorios</p>
-        ) : null} */}
-
-        {/* {mensajeError && (
-          <p className={error ? "error" : "exito"}>{mensajeError}</p>
-        )} */}
-
-
         <div className="form-group my-2">
           <input
             placeholder="Ingrese nombre"
@@ -102,8 +92,10 @@ const Formulario = ({ mensajeError, setMensajeError }) => {
           Enviar
         </button>
       </form>
-<div className="mt-2">  {mensajeError && <p className="error">{mensajeError}</p>} </div>    
-
+      <div className="mt-2">
+        {" "}
+        {mensajeError && <p className="error">{mensajeError}</p>}{" "}
+      </div>
     </>
   );
 };
