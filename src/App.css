@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+
+.error {
+  padding: 10px;
+  color: white;
+  background-color: red;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 10px;
+}
