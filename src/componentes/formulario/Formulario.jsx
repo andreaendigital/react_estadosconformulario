@@ -8,7 +8,7 @@ const Formulario = ({ mensajeError, setMensajeError }) => {
   const [confirmar, setConfirmar] = useState(false);
 
   //Estado para los errores, se activa cuando están los campos vacíos y se desactiva cuando están completados:
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [emailError, setEmailError] = useState(false);
 
   const validarDatos = (e) => {
@@ -17,12 +17,12 @@ const Formulario = ({ mensajeError, setMensajeError }) => {
 
     //Validación de los datos/inputs;
     if (nombre === "" || email === "" || password === "" || confirmar === "") {
-      setError(true);
+      // setError(true);
       setMensajeError("Todos los campos son obligatorios");
       return; // si existe error, no avanza en la lógica del programa
     }
     if (password !== confirmar) {
-      setError(true);
+      // setError(true);
       setMensajeError("Las contraseñas no coinciden");
       setNombre("");
       setEmail("");
@@ -31,8 +31,8 @@ const Formulario = ({ mensajeError, setMensajeError }) => {
       return;
     }
     // Si el formulario se envía correctamente devolvemos todos nuestros inputs al inicio, se resetea el formulario
-    setError(false); //elimina el mensaje de error
-    setMensajeError("Registro exitoso"); // Mensaje de éxito
+    // setError(false); //elimina el mensaje de error
+    setMensajeError("Registro completo"); // Mensaje de éxito
     setNombre("");
     setEmail("");
     setPassword("");
@@ -57,7 +57,6 @@ const Formulario = ({ mensajeError, setMensajeError }) => {
           <p className={error ? "error" : "exito"}>{mensajeError}</p>
         )} */}
 
-        {mensajeError && <p className="error">{mensajeError}</p>}
 
         <div className="form-group my-2">
           <input
@@ -103,6 +102,8 @@ const Formulario = ({ mensajeError, setMensajeError }) => {
           Enviar
         </button>
       </form>
+<div className="mt-2">  {mensajeError && <p className="error">{mensajeError}</p>} </div>    
+
     </>
   );
 };

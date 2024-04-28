@@ -1,22 +1,3 @@
-// import { useState } from "react";
-// const Alert = ({ emailError, passwordError, datosError }) => {
-//   return (
-//     <>
-//       {datosError && <p className="error">Todos los campos son obligatorios</p>}
-//       {emailError && <p className="error">Formato de mail incorrecto</p>}
-//       {passwordError && <p className="error">Contraseña incorrecta</p>}
-//     </>
-//   );
-// };
-// const Alert = ({ mensajeError }) => {
-//   return (
-//     <>
-//       {mensajeError && <p className={mensajeError.includes("error") ? "error" : "exito"}>{mensajeError}</p>}
-//     </>
-//   );
-// };
-// export default Alert;
-
 import React from "react";
 
 const Alert = ({ mensajeError }) => {
@@ -28,17 +9,20 @@ const Alert = ({ mensajeError }) => {
 
     // Determinar el tipo de mensaje (error o éxito) basado en el contenido de mensajeError
     const esError = mensajeError.toLowerCase().includes("error");
+    const esExito = mensajeError.toLowerCase().includes("completo");
 
-    return (
-      <p className={esError ? "error" : "exito"}>
-        {mensajeError}
-      </p>
-    );
+    if (esError) {
+      return <p className="error">{mensajeError}</p>;
+    }
+    if (esExito) {
+      return <p className="exito">{mensajeError}</p>;
+    }
   };
 
   return (
     <>
-      {renderizarMensaje()}
+      {renderizarMensaje()}{" "}
+      {/* Llamada a la función renderizarMensaje para mostrar el mensaje */}
     </>
   );
 };
