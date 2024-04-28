@@ -3,10 +3,10 @@ import Alert from "../alert/Alert";
 import Formulario from "../formulario/Formulario";
 import SocialButton from "../socialbutton/SocialButton";
 
-function Registro() {
-  const [emailError, setEmailError] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
-  const [datosError, setDatosError] = useState(false);
+function Registro({ mensajeError, setMensajeError }) {
+  // const [emailError, setEmailError] = useState(false);
+  // const [passwordError, setPasswordError] = useState(false);
+  // const [datosError, setDatosError] = useState(false);
 
   return (
     <>
@@ -17,12 +17,16 @@ function Registro() {
         <SocialButton social="linkedin" />
       </div>
       <p>o usa un mail para registrarse</p>
-      <Formulario />
-      <Alert
+      {/* <Formulario setMensajeError={setMensajeError} /> */}
+      <Formulario mensajeError={mensajeError} setMensajeError={setMensajeError} />
+
+      <Alert mensajeError={mensajeError} />
+
+      {/* <Alert
         emailError={emailError}
         passwordError={passwordError}
         datosError={datosError}
-      />
+      /> */}
     </>
   );
 }

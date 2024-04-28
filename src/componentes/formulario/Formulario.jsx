@@ -1,6 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-const Formulario = () => {
+const Formulario = ({ mensajeError, setMensajeError }) => {
   //Estados del formulario
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
@@ -18,10 +18,12 @@ const Formulario = () => {
     //Validación de los datos/inputs;
     if (nombre === "" || email === "" || password === "" || confirmar === "") {
       setError(true);
+      setMensajeError("Todos los campos son obligatorios");
       return; // si existe error, no avanza en la lógica del programa
     }
     if (password !== confirmar) {
       setError(true);
+      setMensajeError("Las contraseñas no coinciden");
       setNombre("");
       setEmail("");
       setPassword("");
@@ -30,6 +32,7 @@ const Formulario = () => {
     }
     // Si el formulario se envía correctamente devolvemos todos nuestros inputs al inicio, se resetea el formulario
     setError(false); //elimina el mensaje de error
+    setMensajeError("Registro exitoso"); // Mensaje de éxito
     setNombre("");
     setEmail("");
     setPassword("");
@@ -46,9 +49,15 @@ const Formulario = () => {
     <>
       <form className="formulario" onSubmit={validarDatos}>
         {/* cuando el formulario se envie se ejecuta función de validar datos */}
-        {error ? (
+        {/* {error ? (
           <p className="error">Todos los campos son obligatorios</p>
-        ) : null}
+        ) : null} */}
+
+        {/* {mensajeError && (
+          <p className={error ? "error" : "exito"}>{mensajeError}</p>
+        )} */}
+
+        {mensajeError && <p className="error">{mensajeError}</p>}
 
         <div className="form-group my-2">
           <input
