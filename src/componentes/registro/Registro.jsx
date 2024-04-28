@@ -4,10 +4,6 @@ import Formulario from "../formulario/Formulario";
 import SocialButton from "../socialbutton/SocialButton";
 
 function Registro({ mensajeError, setMensajeError }) {
-  // const [emailError, setEmailError] = useState(false);
-  // const [passwordError, setPasswordError] = useState(false);
-  // const [datosError, setDatosError] = useState(false);
-
   return (
     <>
       <h1>Crea una cuenta</h1>
