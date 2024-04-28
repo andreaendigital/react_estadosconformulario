@@ -17,8 +17,8 @@ function Registro({ mensajeError, setMensajeError }) {
         <SocialButton social="linkedin" />
       </div>
       <p>o usa un mail para registrarse</p>
-      {/* <Formulario setMensajeError={setMensajeError} /> */}
-      <Formulario mensajeError={mensajeError} setMensajeError={setMensajeError} />
+      <Formulario setMensajeError={setMensajeError} />
+      {/* <Formulario mensajeError={mensajeError} setMensajeError={setMensajeError} /> */}
 
       <Alert mensajeError={mensajeError} />
 

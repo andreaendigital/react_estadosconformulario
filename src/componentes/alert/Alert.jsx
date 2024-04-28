@@ -7,16 +7,18 @@ const Alert = ({ mensajeError }) => {
       return null; // No renderizar ningún mensaje si mensajeError está vacío
     }
 
-    // Determinar el tipo de mensaje (error o éxito) basado en el contenido de mensajeError
-    const esError = mensajeError.toLowerCase().includes("error");
-    const esExito = mensajeError.toLowerCase().includes("completo");
+      if (mensajeError === "Todos los campos son obligatorios"){
+        return <p className="error">{mensajeError}</p>;
+      }
 
-    if (esError) {
-      return <p className="error">{mensajeError}</p>;
-    }
-    if (esExito) {
-      return <p className="exito">{mensajeError}</p>;
-    }
+      if (mensajeError === "Las contraseñas no coinciden"){
+        return <p className="error">{mensajeError}</p>;
+      }
+
+      if (mensajeError === "Registro completo"){
+        return <p className="exito">{mensajeError}</p>;
+      }
+
   };
 
   return (
