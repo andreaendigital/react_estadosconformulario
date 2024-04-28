@@ -58,7 +58,7 @@ Lista de software y herramientas, incluyendo versiones, que necesitas para insta
 
 - Formulario en proyecto:
 
-![FormularioReact](https://github.com/andreaendigital/react_estadosconformulario/assets/154395788/38fedee7-f1cb-437b-ba9e-e1e2415d5446)
+![FormularioReact](https://github.com/andreaendigital/react_estadosconformulario/assets/154395788/38fedee7-f1cb-437b-ba9e-e1e2415d5446 | width=250 )
 
 - Validación de Formato de Email:
 
