@@ -70,8 +70,8 @@ Lista de software y herramientas, incluyendo versiones, que necesitas para insta
 Explica qué tecnologías usaste para construir este proyecto. Aquí algunos ejemplos:
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - El lenguaje utilizado
-- [React](https://react.dev/)- Node paquete PG
-- [Vite](https://vitejs.dev/guide/)- Node paquete PG
+- [React](https://react.dev/)- React
+- [Vite](https://vitejs.dev/guide/)- Vite
   
 
 ## Autores ⚡ 
